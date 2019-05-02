@@ -28,13 +28,13 @@ giocate_valide = n_max - n_casuali.length;
 
 //genere i 16 numeri casuali in base alla difficoltà scelta
 for (var i = 0; i < n_casuali.length; i++) {
-  n_casuali[i] = Math.floor(Math.random() * 100 + 1);
+  n_casuali[i] = Math.floor(Math.random() * n_max + 1);
 }
-console.log("Stampo il contenuto di array numeri casuali in caso si vogliano fare verifiche: "+n_casuali);
+console.log("Stampo il contenuto di array numeri casuali in caso si vogliano fare verifiche: "+n_casuali.sort());
 
-//eseguo un ciclo for da 0 a n_max in modo che la condizione "raggiunge il numero massimo possibile di numeri consentiti" viene già controllata
+//eseguo un ciclo for da 0 a giocate_valide in modo che la condizione "raggiunge il numero massimo possibile di numeri consentiti" viene già controllata
 //e all'interno eseguo un if per verificare se il numero è vietato o meno
-for (var i = 0; i < n_max; i++) {
+for (var i = 0; i < giocate_valide; i++) {
   var n_utente = parseInt(prompt("Inserisci un numero da 1 a 100: "));
 
   //ciclo for per verificare che il num inserito dall'utente non sia uguale a quello casuale,in caso fosse termina diventa true
