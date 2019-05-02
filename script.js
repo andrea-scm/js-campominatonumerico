@@ -3,7 +3,7 @@
 // La partita termina quando il giocatore inserisce un numero “vietato” o raggiunge il numero massimo possibile di numeri consentiti.
 // Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
 
-var difficoltà = parseInt(prompt("Inserisci una difficoltà 0(facile) - 1(medio) - 2(difficile): "));
+var difficoltà = parseInt(prompt("Inserisci una difficoltà 0 - 1 - 2: "));
 var n_max,giocate_valide;
 var n_casuali = Array(16);
 var termina = false;
