@@ -44,8 +44,8 @@ for (var i = 0; i < n_max; i++) {
     }
   }
 
-  //se termina è uguale a true e l'argomento inserito non è un numero compreso tra 1 e 100 il gioco termina,altrimenti incremento in punteggio
-  if(termina == false && n_utente.isInteger && (n_utente > 0 && n_utente < 101)){
+  //se termina è uguale a true il gioco termina,altrimenti incremento in punteggio
+  if(termina == false){
     punteggio+=1;
   }else{
     alert('Hai totalizzato: '+punteggio+' punti');
