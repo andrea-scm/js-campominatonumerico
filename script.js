@@ -9,7 +9,6 @@ var n_casuali = Array(16);
 var termina = false;
 var punteggio = 0;
 
-
 //varie modalità di difficoltà
 switch (difficoltà) {
   case 0:
@@ -48,7 +47,8 @@ for (var i = 0; i < giocate_valide; i++) {
   if(termina == false){
     punteggio+=1;
   }else{
-    alert('Hai totalizzato: '+punteggio+' punti');
     break;
   }
 }
+
+alert('Hai totalizzato: '+punteggio+' punti');
