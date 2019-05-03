@@ -48,7 +48,7 @@ console.log("Stampo il contenuto di array numeri casuali in caso si vogliano far
 for (var i = 0; i < giocate_valide; i++) {
   var n_utente = parseInt(prompt("Inserisci un numero da 1 a "+n_max+" : "));
 
-  //ciclo for per verificare che il num inserito dall'utente non sia uguale a quello casuale,in caso fosse termina diventa true
+  //verifico che il num inserito dall'utente non sia uguale a quello casuale,in caso fosse termina diventa true
   if(n_casuali.includes(n_utente)){
     termina = true;
   }
