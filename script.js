@@ -31,7 +31,7 @@ giocate_valide = n_max - n_casuali.length;
 var n_casuali = [];
 while (n_casuali.length < 16){ //in modo che man mano si riempie l'array fino a quando non arriva a lunghezza 16
   var rndNum;
-  rndNum = getRandomNum(100);
+  rndNum = getRandomNum(n_max);
   if(n_casuali.includes(rndNum) == false){ //includes mi ritorna true se quell'elemento è contenuto nell'array altriminti da false
     n_casuali.push(rndNum);
   }
@@ -46,7 +46,7 @@ console.log("Stampo il contenuto di array numeri casuali in caso si vogliano far
 //eseguo un ciclo for da 0 a giocate_valide in modo che la condizione "raggiunge il numero massimo possibile di numeri consentiti" viene già controllata
 //e all'interno eseguo un if per verificare se il numero è vietato o meno
 for (var i = 0; i < giocate_valide; i++) {
-  var n_utente = parseInt(prompt("Inserisci un numero da 1 a 100: "));
+  var n_utente = parseInt(prompt("Inserisci un numero da 1 a "+n_max+" : "));
 
   //ciclo for per verificare che il num inserito dall'utente non sia uguale a quello casuale,in caso fosse termina diventa true
   for (var j = 0; j < n_casuali.length; j++) {
@@ -55,12 +55,13 @@ for (var i = 0; i < giocate_valide; i++) {
     }
   }
 
-  //se termina è uguale a true il gioco termina,altrimenti incremento in punteggio
+  //se termina è uguale a true il gioco termina,altrimenti incremento in punteggio inoltre
+  //verifico che il n_utente non venga inserito nuovamente,in caso l'utente dovrà inserirne un'altro
   if(termina == false && n_inseriti.includes(n_utente) == false){
     punteggio+=1;
     n_inseriti.push(n_utente);
   }else if(n_inseriti.includes(n_utente)){
-      alert("Numero già inserito!");
+    alert("Numero già inserito!");
   }else{
     break;
   }
