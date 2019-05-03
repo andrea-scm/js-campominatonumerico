@@ -49,11 +49,10 @@ for (var i = 0; i < giocate_valide; i++) {
   var n_utente = parseInt(prompt("Inserisci un numero da 1 a "+n_max+" : "));
 
   //ciclo for per verificare che il num inserito dall'utente non sia uguale a quello casuale,in caso fosse termina diventa true
-  for (var j = 0; j < n_casuali.length; j++) {
-    if(n_casuali[j] == n_utente){
-      termina = true;
-    }
+  if(n_casuali.includes(n_utente)){
+    termina = true;
   }
+
 
   //se termina è uguale a true il gioco termina,altrimenti incremento in punteggio inoltre
   //verifico che il n_utente non venga inserito nuovamente,in caso l'utente dovrà inserirne un'altro
@@ -66,7 +65,5 @@ for (var i = 0; i < giocate_valide; i++) {
     break;
   }
 }
-
-
 
 alert('Hai totalizzato: '+punteggio+' punti');
